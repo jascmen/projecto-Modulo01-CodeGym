@@ -23,7 +23,7 @@
 
 <h3>Alertas</h3>
 
-[Alerta1](Images/alerta1.png)
+![Alerta1](Images/alerta1.png)
 
 <br>
 
