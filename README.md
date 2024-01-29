@@ -13,15 +13,15 @@
 
 <h2>Capturas de pantalla</h2>
 <h3>Interfaz</h3>
-![Interfaz](https://github.com/jascmen/projecto-Modulo01-CodeGym/blob/master/Images/interfaz.png)
+![Interfaz](Images/interfaz.png)
 <h3>Seleccionar archivo a descifrar</h3>
-![Seleccionar](https://github.com/jascmen/projecto-Modulo01-CodeGym/blob/master/Images/seleccionar.png)
+![Seleccionar](Images/seleccionar.png)
 <h3>Alertas</h3>
-![Alerta1](https://github.com/jascmen/projecto-Modulo01-CodeGym/blob/master/Images/alerta1.png)
+![Alerta1](Images/alerta1.png)
 <br>
-![Alerta2](https://github.com/jascmen/projecto-Modulo01-CodeGym/blob/master/Images/alerta2.png)
+![Alerta2](Images/alerta2.png)
 <br>
-![Alerta3](https://github.com/jascmen/projecto-Modulo01-CodeGym/blob/master/Images/alerta3.png)
+![Alerta3](Images/alerta3.png)
 
 <h2>Conclusión</h2>
 <p>Este proyecto fue muy interesante, ya que me permitio aprender sobre el cifrado cesar y como implementarlo en un programa. Ademas, me permitio aprender sobre Java Swing y como diseñar una interfaz grafica simple. Aunque el proyecto fue sencillo, me permitio aprender mucho y me ayudo a entender mejor el lenguaje de programacion Java</p>
