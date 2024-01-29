@@ -1,3 +1,10 @@
+package Desencriptacion;
+
+import GestionArchivos.GestionarArchivos;
+import Tools.Alfabeto;
+import Tools.Diccionario;
+import Tools.EncriptacionTypes;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,7 +20,9 @@ public class BruteForce {
 
     private int [] tiposEncriptacion =  new EncriptacionTypes().getTiposEncriptacion();
 
-    boolean desencriptarPorFuerzaBruta(List<String> lineas){
+    GestionarArchivos gestionarArchivos = new GestionarArchivos();
+
+    public boolean desencriptarPorFuerzaBruta(List<String> lineas){
         boolean flag = false;
         int tipoEncriptacion;
 
@@ -48,26 +57,8 @@ public class BruteForce {
             }
 
             if (textoTieneSentido(lineasDesEncriptadas)) {
-                //creamos la carpeta donde se guardarán los archivos desencriptados
-                File carpeta = new File("archivosDesencriptados");
-                if(!carpeta.exists()){
-                    carpeta.mkdir();
-                }
 
-                //obtenemos el número de archivos que hay en la carpeta
-                int count = carpeta.listFiles().length +1;
-                // Crear un nuevo archivo .txt para el texto encriptado
-                File file = new File(carpeta, "textoDesEncriptado_"+count+".txt");
-                try (FileWriter writer = new FileWriter(file)) {
-                    for (String linea : lineasDesEncriptadas) {
-                        writer.write(linea);
-                        writer.write(System.lineSeparator());
-                    }
-                    flag = true;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    flag =  false;
-                }
+                flag = gestionarArchivos.guardarArchivoDesencripado(lineasDesEncriptadas);
                 break loopGeneral;
 
             }else {

@@ -1,14 +1,17 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+package Desencriptacion;
+
+import GestionArchivos.GestionarArchivos;
+import Tools.Alfabeto;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Decrypt {
 
     char [] alfabeto = new Alfabeto().getAlfabeto();
+    GestionarArchivos gestionarArchivos = new GestionarArchivos();
 
-    boolean desencriptarArchivos(List<String> lineas, int tipoEncriptacion){
+    public boolean desencriptarArchivos(List<String> lineas, int tipoEncriptacion){
         List<String> lineasDesEncriptadas = new ArrayList<>();
 
         for(String linea : lineas){
@@ -36,24 +39,7 @@ public class Decrypt {
             lineasDesEncriptadas.add(new String(textoDesEncriptado));
         }
 
-        //creamos la carpeta donde se guardarán los archivos desencriptados
-        File carpeta = new File("archivosDesencriptados");
-        if(!carpeta.exists()){
-            carpeta.mkdir();
-        }
+        return gestionarArchivos.guardarArchivoDesencripado(lineasDesEncriptadas);
 
-        int count = carpeta.listFiles().length +1;
-        // Crear un nuevo archivo .txt para el texto encriptado
-        File file = new File(carpeta, "textoDesEncriptado_"+count+".txt");
-        try (FileWriter writer = new FileWriter(file)) {
-            for (String linea : lineasDesEncriptadas) {
-                writer.write(linea);
-                writer.write(System.lineSeparator());
-            }
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
     }
 }

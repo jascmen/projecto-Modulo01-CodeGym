@@ -1,9 +1,12 @@
+import Desencriptacion.BruteForce;
+import Desencriptacion.Decrypt;
+import Encriptacion.Encript;
+import Tools.EncriptacionTypes;
+
 import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Menu01 {
     private JComboBox selectorTipo;
@@ -59,7 +62,7 @@ public class Menu01 {
                 File selectedFile = fileChooser.getSelectedFile();
                 if (selectedFile.exists()) {
                     String nombreArchivo = selectedFile.getName();
-                    String extensionArchivo = nombreArchivo.substring(nombreArchivo.lastIndexOf(".") + 1); // Obtener la extensión del archivo
+                    String extensionArchivo = nombreArchivo.substring(nombreArchivo.lastIndexOf(".") + 1);
                     if ("txt".equals(extensionArchivo)) {
                         //Esta lista se usará para guardar las líneas del archivo
                         List<String> lines = new ArrayList<>();

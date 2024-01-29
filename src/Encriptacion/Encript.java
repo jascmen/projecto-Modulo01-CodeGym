@@ -1,13 +1,17 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+package Encriptacion;
+
 import java.util.ArrayList;
 import java.util.List;
+import  GestionArchivos.GestionarArchivos;
+import Tools.Alfabeto;
 
 public class Encript {
     char [] alfabeto = new Alfabeto().getAlfabeto();
+    GestionarArchivos gestionarArchivos = new GestionarArchivos();
 
-    boolean encriptarArchivo(List<String> lineas, int tipoEncriptacion){
+
+
+    public boolean encriptarArchivo(List<String> lineas, int tipoEncriptacion){
         List<String> lineasEncriptadas = new ArrayList<>();
 
         for(String linea : lineas){
@@ -33,24 +37,7 @@ public class Encript {
             lineasEncriptadas.add(new String(textoEncriptado));
         }
 
-        //creamos la carpeta donde se guardarán los archivos encriptados
-        File carpeta = new File("archivosEncriptados");
-        if(!carpeta.exists()){
-            carpeta.mkdir();
-        }
 
-        int count = carpeta.listFiles().length +1;
-        // Crear un nuevo archivo .txt para el texto encriptado
-        File file = new File(carpeta, "textoEncriptado_"+count+".txt");
-        try (FileWriter writer = new FileWriter(file)) {
-            for (String linea : lineasEncriptadas) {
-                writer.write(linea);
-                writer.write(System.lineSeparator());
-            }
-            return true;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
-        }
+        return gestionarArchivos.guardarArchivoEncriptado(lineasEncriptadas);
     }
 }
