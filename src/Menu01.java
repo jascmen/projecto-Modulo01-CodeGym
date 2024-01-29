@@ -19,6 +19,13 @@ public class Menu01 {
 
 
     public Menu01() {
+        dibujarInterfaz();
+        agregarEventoEncriptar();
+        agregarEventoDesencriptar();
+        agregarEventoDesencriptacionFuerzaBruta();
+    }
+
+    public void dibujarInterfaz(){
         JFrame frame = new JFrame("Encriptador");
         JPanel panel = new JPanel();
         seleccioneLaOpcionTextArea.setText("Seleccione la opción con la que desea encriptar o desencriptar su texto");
@@ -41,6 +48,10 @@ public class Menu01 {
             this.selectorTipo.addItem(i);
         }
 
+
+    }
+
+    public void agregarEventoEncriptar(){
         encriptarArchivosButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
             int returnValue = fileChooser.showOpenDialog(null);
@@ -78,6 +89,9 @@ public class Menu01 {
 
         });
 
+    }
+
+    public void agregarEventoDesencriptar(){
         desencriptarArchivosButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
             //ubicación de la carpeta donde se guardan los archivos encriptados
@@ -117,7 +131,9 @@ public class Menu01 {
 
             }
         });
+    }
 
+    public void agregarEventoDesencriptacionFuerzaBruta(){
         desencriptacionFuerzaBrutaButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser();
             File currentDirectory = new File("./archivosEncriptados");
@@ -156,14 +172,12 @@ public class Menu01 {
 
 
         });
-
-
-
     }
 
 
+
     public static void main(String[] args) {
-        new Menu01();
+
     }
 
 
