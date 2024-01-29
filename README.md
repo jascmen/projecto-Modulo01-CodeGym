@@ -13,15 +13,15 @@
 
 <h2>Capturas de pantalla</h2>
 <h3>Interfaz</h3>
-![Interfaz](./images/interfaz.png)
+![Interfaz](images/interfaz.png)
 <h3>Seleccionar archivo a descifrar</h3>
-![Seleccionar](./images/seleccionar.png)
+![Seleccionar](images/seleccionar.png)
 <h3>Alertas</h3>
-![Alerta1](./images/alerta1.png)
+![Alerta1](images/alerta1.png)
 <br>
-![Alerta2](./images/alerta2.png)
+![Alerta2](images/alerta2.png)
 <br>
-![Alerta3](./images/alerta3.png)
+![Alerta3](images/alerta3.png)
 
 <h2>Conclusión</h2>
 <p>Este proyecto fue muy interesante, ya que me permitio aprender sobre el cifrado cesar y como implementarlo en un programa. Ademas, me permitio aprender sobre Java Swing y como diseñar una interfaz grafica simple. Aunque el proyecto fue sencillo, me permitio aprender mucho y me ayudo a entender mejor el lenguaje de programacion Java</p>
