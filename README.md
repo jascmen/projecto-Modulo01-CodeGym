@@ -12,15 +12,25 @@
 </ul>
 
 <h2>Capturas de pantalla</h2>
+
 <h3>Interfaz</h3>
+
 ![Interfaz](Images/interfaz.png)
+
 <h3>Seleccionar archivo a descifrar</h3>
+
 ![Seleccionar](Images/seleccionar.png)
+
 <h3>Alertas</h3>
-![Alerta1](Images/alerta1.png)
+
+<img src="Images/alerta1.png">
+
 <br>
+
 ![Alerta2](Images/alerta2.png)
+
 <br>
+
 ![Alerta3](Images/alerta3.png)
 
 <h2>Conclusión</h2>
